@@ -32,6 +32,11 @@ public class PageLogin extends BaseYourLogo{
 	WebElement ylclickloginbtn;
 	//private WebDriver driver;
 	
+	
+	@FindBy(xpath = "//a[text()='Women']")
+	
+	WebElement LogoElement;
+	
 	public PageLogin(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
@@ -81,6 +86,9 @@ public class PageLogin extends BaseYourLogo{
 	
 	public void Verfify_title(String Actual_title)
 	{
+		WebDriverWait 
+		waitforelement=new WebDriverWait(driver, Duration.ofSeconds(30));
+		waitforelement.until(ExpectedConditions.visibilityOf(LogoElement));
 		 object_ValidateElements=new ValidateElements();
 		 object_ValidateElements.VerifyPageTitle(Actual_title);
 		

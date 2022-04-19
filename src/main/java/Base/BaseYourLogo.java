@@ -11,16 +11,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+import ReportYourLogo.Reporting;
+import Utilities.UtilitiesYourLogo;
 import Validation.ValidateElements;
 
 public class BaseYourLogo {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	FileReader file;
-	Properties prob;
+	public static Properties prob;
 	ValidateElements ObjectValidateElements;
 	public BaseYourLogo() {
 		// TODO Auto-generated constructor stub
+		//public WebDriver driver;
+		//this.driver=driver;
+		
 		
 		 try {
 				file=new FileReader("C:\\Users\\Vijay Krishnan\\Desktop\\Software\\New Location\\YourLogo\\ConfigureData\\loadData.properties");
@@ -35,7 +40,9 @@ public class BaseYourLogo {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
 			
+			//Reporting.Report_Extend();
 		
 		
 		
@@ -59,6 +66,8 @@ public class BaseYourLogo {
 		driver.get(prob.getProperty("URL"));
 		System.out.println("Application lauched");
 		
+		UtilitiesYourLogo.takeScreenShot("Launched Application");
+		
 		 ObjectValidateElements=new ValidateElements();
 		 
 	//	ObjectValidateElements.VerifyPageTitle();
@@ -67,15 +76,6 @@ public class BaseYourLogo {
 		
 	}
 	
-	public void Close_driver() {
-		
-		driver.close();
-		
-	}
-public void Close_quit() {
-		
-		driver.quit();
-		
-	}
+	
 
 }

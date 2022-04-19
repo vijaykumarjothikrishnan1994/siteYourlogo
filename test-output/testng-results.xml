@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-17T20:37:50 IST" name="Suite" finished-at="2022-04-17T20:38:12 IST" duration-ms="21932">
+  <suite started-at="2022-04-18T20:24:52 IST" name="Default suite" finished-at="2022-04-18T20:24:53 IST" duration-ms="804">
     <groups>
     </groups>
-    <test started-at="2022-04-17T20:37:50 IST" name="Test" finished-at="2022-04-17T20:38:12 IST" duration-ms="21932">
-      <class name="TestYourLogo.Testlogin">
-        <test-method is-config="true" signature="launchtheBrowser_init()[pri:0, instance:TestYourLogo.Testlogin@4a7f959b]" started-at="2022-04-17T20:37:50 IST" name="launchtheBrowser_init" finished-at="2022-04-17T20:38:07 IST" duration-ms="16224" status="PASS">
+    <test started-at="2022-04-18T20:24:52 IST" name="Default test" finished-at="2022-04-18T20:24:53 IST" duration-ms="804">
+      <class name="ReportYourLogo.Reporting">
+        <test-method signature="Report_Extend()[pri:0, instance:ReportYourLogo.Reporting@24fcf36f]" started-at="2022-04-18T20:24:52 IST" name="Report_Extend" finished-at="2022-04-18T20:24:53 IST" duration-ms="759" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchtheBrowser_init -->
-        <test-method signature="Login_into_the_Website()[pri:0, instance:TestYourLogo.Testlogin@4a7f959b]" started-at="2022-04-17T20:38:07 IST" name="Login_into_the_Website" finished-at="2022-04-17T20:38:12 IST" duration-ms="5667" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_into_the_Website -->
-      </class> <!-- TestYourLogo.Testlogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- Report_Extend -->
+      </class> <!-- ReportYourLogo.Reporting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

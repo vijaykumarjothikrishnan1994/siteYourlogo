@@ -1,5 +1,10 @@
-PageYourLogo\PageLogin.class
-Base\BaseYourLogo.class
+ReportYourLogo\Reporting.class
 TestYourLogo\Testlogin.class
 Utilities\UtilitiesYourLogo.class
+PageYourLogo\PageDress.class
 Validation\ValidateElements.class
+PageYourLogo\PagetabWomen.class
+TestYourLogo\TestDress.class
+PageYourLogo\PageLogin.class
+Base\BaseYourLogo.class
+TestYourLogo\TesttabWomen.class
