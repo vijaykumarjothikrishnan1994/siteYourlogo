@@ -1,9 +1,12 @@
 package PageYourLogo;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,6 +19,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Base.BaseYourLogo;
+import HandlingYourLogo.WindowHandling;
+import Utilities.UtilitiesYourLogo;
 import Validation.ValidateElements;
 
 public class PageDress extends BaseYourLogo{
@@ -35,7 +40,14 @@ public class PageDress extends BaseYourLogo{
 	@FindBy(xpath = "//div[@itemprop='offers']//span")
 	WebElement eleValueTobeCapturedTshirt;
 	
+	@FindBy(xpath = "//span[contains(text(),'Properties')]")
+	WebElement rightclickProperties;
 	
+	@FindBy(css = "img[title='Faded Short Sleeve T-shirts']")
+	WebElement mousehouronimage;
+	
+	@FindBy(css = "a[title='New products']")
+	WebElement ClickNewtab;
 	
 	public PageDress(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -82,7 +94,9 @@ public class PageDress extends BaseYourLogo{
 	{
 		System.out.println("Wait starts");
 		try {
-			waitPageDress.until(ExpectedConditions.visibilityOfAllElements(eleSelectAllTshirtsb));
+			//waitPageDress.until(ExpectedConditions.visibilityOfAllElements(eleSelectAllTshirtsb));
+			
+			driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -130,5 +144,94 @@ public class PageDress extends BaseYourLogo{
 		}
 	}
 	 
+	
+	
+	public void RightClickOnProperties() {
+		
+		waitPageDress.until(ExpectedConditions.visibilityOf(rightclickProperties));
+		Actions act=new Actions(driver);
+		act.contextClick(rightclickProperties).build().perform();
+		
+	}
+	
+	public void ScrollDownTheDressPage()
+	{
+		JavascriptExecutor jssd=(JavascriptExecutor)driver;
+		jssd.executeScript("window.scrollBy(0,550)", "");
+	}
+	
+	
+	public  void mousehourDresspage()
+	{
+		
+		waitPageDress.until(ExpectedConditions.visibilityOf(mousehouronimage));
+		
+		//waitPageDress.until(ExpectedConditions.elementToBeClickable(mousehouronimage));
+		Actions actimage=new Actions(driver);
+		actimage.moveToElement(mousehouronimage).build().perform();
+		
+	}
+	
+	
+	public void Automate_tab()
+	{ /*
+		 * try { Thread.sleep(3000); } catch (InterruptedException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
+		
+		waitPageDress.until(ExpectedConditions.visibilityOf(ClickNewtab));
+		
+		String Click_Newtab=Keys.chord(Keys.CONTROL,Keys.ENTER);
+		
+		ClickNewtab.sendKeys(Click_Newtab);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String currentwindow=driver.getWindowHandle();
+		ArrayList<String> available_tab=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(available_tab.get(1));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		UtilitiesYourLogo.takeScreenShot("This is the new tab");
+		System.out.println("This is new window: "+driver.getTitle());
+		
+		/*driver.switchTo().window(available_tab.get(0));
+		System.out.println("This is currenct window"+driver.getTitle());
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();*/
+		
+		
+	//}
+	/*
+	 * System.out.println("Clicking the new Empty tab");
+	 * 
+	 * String click_new_tab= Keys.chord(Keys.CONTROL,"t");
+	 * ClickNewtab.sendKeys(click_new_tab);
+	 * System.out.println("new action working fine");
+	 */
+		
+		/*driver.switchTo().window(available_tab.get(1));
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		
+		}*/	
+	WindowHandling.Class_Handling_window();
 
+}
 }

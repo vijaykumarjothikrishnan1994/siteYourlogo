@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-18T20:54:28 IST" name="Suite" finished-at="2022-04-18T20:54:28 IST" duration-ms="11">
+  <suite started-at="2022-04-27T12:12:05 IST" name="Suite" finished-at="2022-04-27T12:13:18 IST" duration-ms="72524">
     <groups>
     </groups>
-    <test started-at="2022-04-18T20:54:28 IST" name="Test" finished-at="2022-04-18T20:54:28 IST" duration-ms="11">
+    <test started-at="2022-04-27T12:12:05 IST" name="Test" finished-at="2022-04-27T12:13:18 IST" duration-ms="72524">
+      <class name="TestYourLogo.TestDress">
+        <test-method is-config="true" signature="init_TestDress()[pri:0, instance:TestYourLogo.TestDress@4738a206]" started-at="2022-04-27T12:12:05 IST" name="init_TestDress" finished-at="2022-04-27T12:12:37 IST" duration-ms="31340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init_TestDress -->
+        <test-method signature="TestDress_init()[pri:0, instance:TestYourLogo.TestDress@4738a206]" started-at="2022-04-27T12:12:37 IST" name="TestDress_init" finished-at="2022-04-27T12:13:18 IST" duration-ms="41134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDress_init -->
+      </class> <!-- TestYourLogo.TestDress -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -9,7 +9,12 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 
 import ReportYourLogo.Reporting;
 import Utilities.UtilitiesYourLogo;
@@ -74,6 +79,48 @@ public class BaseYourLogo {
 		
 		
 		
+	}
+	
+	//@Test
+	@Parameters("Browser")
+	public static void ChooseBrowser(String Browser)
+	{
+		
+		if(Browser.equalsIgnoreCase("chrome"))
+		{
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--disable-notifications");
+
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\Vijay Krishnan\\Desktop\\Software\\Driver\\Chrome\\chromedriver.exe");
+			driver = new ChromeDriver(option);
+		
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			
+		}
+		else if(Browser.equalsIgnoreCase("firefox"))
+		{
+			FirefoxDriver firefox=new FirefoxDriver();
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\\\Users\\\\Vijay Krishnan\\\\Desktop\\\\Software\\\\Driver\\\\Chrome\\\\chromedriver.exe");
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			
+			
+			
+		}
+		else if(Browser.equalsIgnoreCase("ie"))
+		{
+			EdgeDriver edge=new EdgeDriver();
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\\\Users\\\\Vijay Krishnan\\\\Desktop\\\\Software\\\\Driver\\\\Chrome\\\\chromedriver.exe");
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			
+			
+		}
+			
 	}
 	
 	

@@ -6,11 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="test" value="true"/>
@@ -37,5 +32,7 @@
 	<classpathentry kind="lib" path="C:/Users/Vijay Krishnan/Desktop/Software/Driver/Selenium/selenium-server-4.1.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vijay Krishnan/Desktop/Software/Driver/Chrome/chromedriver_win32.zip"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Vijay Krishnan/Desktop/Software/Driver/msedgedriver.exe"/>
+	<classpathentry kind="lib" path="C:/Users/Vijay Krishnan/Desktop/Software/Driver/geckodriver-v0.31.0-win64/geckodriver.exe"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

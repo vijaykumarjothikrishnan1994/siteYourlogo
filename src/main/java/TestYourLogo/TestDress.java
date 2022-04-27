@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import Base.BaseYourLogo;
 import PageYourLogo.PageDress;
+import Utilities.UtilitiesYourLogo;
 import Validation.ValidateElements;
 
 public class TestDress extends BaseYourLogo{
@@ -32,5 +33,25 @@ public class TestDress extends BaseYourLogo{
 		// object_PageDress.TshirtGetAttributeValue();
 		 
 		 System.out.println("Attribute value captured ");
+		 
+		 object_PageDress.ScrollDownTheDressPage();
+		 
+		 System.out.println("Right click on the properties element");
+		 
+		// object_PageDress.RightClickOnProperties();
+		 UtilitiesYourLogo.takeScreenShot("Right click operation for Properties element");
+		 
+		 System.out.println("Right click performed sucessfully");
+		 
+		 System.out.println("Performing mousehour action");
+		 //object_PageDress.ScrollDownTheDressPage();
+		 object_PageDress.mousehourDresspage();
+		 
+		 System.out.println("Performed mousehour action sucessfully");
+		 
+		 System.out.println("Opening the new tab in dress page ");
+		 
+		 object_PageDress.Automate_tab();
+		 System.out.println("opening the tab action performed successfully");
 	}
 }

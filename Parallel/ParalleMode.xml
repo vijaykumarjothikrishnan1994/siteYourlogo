@@ -2,8 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="classes" name="Suite">
   <test thread-count="5" parallel="classes" name="Test">
+  <parameter name="Browser" value="firefox"></parameter>
     <classes>
+      <class name="TestYourLogo.Testlogin"/>
       <class name="TestYourLogo.TestDress"/>
+      <class name="TestYourLogo.TesttabWomen"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+ 
